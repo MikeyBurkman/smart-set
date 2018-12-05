@@ -1,9 +1,9 @@
 'use strict';
 
-const sut = require('./index.js');
+const { createSet, toSet } = require('./index.js');
 
 it('Should have basic set functionality', () => {
-  const set = sut.createSet((x) => x.id);
+  const set = createSet((x) => x.id);
   set.add({ id: 1, name: 'foo' });
   set.add({ id: 2, name: 'bar' });
   set.add({ id: 1, name: 'foo' });
@@ -55,7 +55,7 @@ it('Should support the native array reduce to turn into a set', () => {
     }
   ];
 
-  const set = arr.reduce(sut.toSet((x) => x.id));
+  const set = arr.reduce(toSet((x) => x.id));
 
   expect(set.size).toEqual(2);
   expect(set.has({ id: 1, name: 'foo' })).toBeTruthy();

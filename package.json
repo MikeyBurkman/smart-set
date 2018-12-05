@@ -1,0 +1,25 @@
+{
+  "name": "smart-set",
+  "version": "1.0.0",
+  "description": "A set implementaion capable of holding more than just primitives",
+  "main": "index.js",
+  "repository": "https://github.com/MikeyBurkman/smart-set.git",
+  "author": "MikeyBurkman <michael.burkman@gmail.com>",
+  "license": "MIT",
+  "typings": "index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "pretty": "prettier --write \"*.js\""
+  },
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "jest": "^23.6.0",
+    "prettier": "^1.15.3"
+  },
+  "keywords": [
+    "set",
+    "datastructure",
+    "unique",
+    "uniq"
+  ]
+}
